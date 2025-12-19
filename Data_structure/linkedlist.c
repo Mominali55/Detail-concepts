@@ -34,6 +34,20 @@ int main(){
         n->next=list;
         list = n;
     }
+
+    //Now trying to display the values
+    node *ptr = list; //As list is pointing to the first node
+    while (ptr != NULL)
+    {
+        /*
+        Here one question can arriv like why not declare:int *ptr?
+        We cant do that bcz of the size of node as the nodes has "2" element in it 'number','next'
+        thats why we use "node *ptr"
+        */
+        printf("%d\n",ptr->number);  //Displays the number that the list was pointing(it was pointing)
+        ptr = ptr->next; //As ptr is pointing to the first node we can update that node..(Updating node)
+    }
+    
 }
 
 
